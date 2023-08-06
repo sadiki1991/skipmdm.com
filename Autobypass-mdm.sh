@@ -7,7 +7,7 @@ echo ""
 echo -e "Check MDM - Skip MDM Auto for MacOS by ${RED}   SKIPMDM.COM ${NC}"
 echo ""
 PS3='Please enter your choice: '
-options=("Bypass on Recovery" "Disable Notification (SIP)" "Disable Notification (Recovery)" "Check MDM Enrollment" "Thoát")
+options=("Bypass on Recovery" "Disable Notification (SIP)" "Disable Notification (Recovery)" "Check MDM Enrollment" "Exit")
 select opt in "${options[@]}"; do
 	case $opt in
 	"Bypass on Recovery")
