@@ -4,7 +4,7 @@ GRN='\033[0;32m'
 BLU='\033[0;34m'
 NC='\033[0m'
 echo ""
-echo -e "Auto Tools for MacOS"
+echo -e "Check MDM - Skip MDM Auto for MacOS by ${RED}   SKIPMDM.COM ${NC}"
 echo ""
 PS3='Please enter your choice: '
 options=("Bypass on Recovery" "Disable Notification (SIP)" "Disable Notification (Recovery)" "Check MDM Enrollment" "Thoát")
