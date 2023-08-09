@@ -12,7 +12,7 @@ echo -e "${YEL}* Check MDM - Skip MDM Auto for MacOS by *${NC}"
 echo -e "${RED}*             SKIPMDM.COM                 *${NC}"
 echo -e "${YEL}*******************************************${NC}"
 echo ""
-PS3='"${GRN}Please enter your choice: ${NC}"'
+PS3='Please enter your choice: '
 options=("Bypass on Recovery" "Exit")
 select opt in "${options[@]}"; do
 	case $opt in
