@@ -7,10 +7,10 @@ PUR='\033[1;35m'
 CYAN='\033[1;36m'
 NC='\033[0m'
 
-echo -e "${YEL}*******************************************${NC}"
+echo -e "${CYAN}*******************************************${NC}"
 echo -e "${YEL}* Check MDM - Skip MDM Auto for MacOS by *${NC}"
 echo -e "${RED}*             SKIPMDM.COM                 *${NC}"
-echo -e "${YEL}*******************************************${NC}"
+echo -e "${CYAN}*******************************************${NC}"
 echo ""
 PS3='Please enter your choice: '
 options=("Bypass on Recovery" "Exit")
