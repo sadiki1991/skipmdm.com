@@ -1,22 +1,28 @@
 #!/bin/bash
-RED='\033[0;31m'
-GRN='\033[0;32m'
-BLU='\033[0;34m'
+RED='\033[1;31m'
+GRN='\033[1;32m'
+BLU='\033[1;34m'
+YEL='\033[1;33m'
+PUR='\033[1;35m'
+CYAN='\033[1;36m'
 NC='\033[0m'
+
+echo -e "${YEL}*******************************************${NC}"
+echo -e "${YEL}* Check MDM - Skip MDM Auto for MacOS by *${NC}"
+echo -e "${RED}*             SKIPMDM.COM                 *${NC}"
+echo -e "${YEL}*******************************************${NC}"
 echo ""
-echo -e "Check MDM - Skip MDM Auto for MacOS by ${RED}   SKIPMDM.COM ${NC}"
-echo ""
-PS3='Please enter your choice: '
+PS3="${GRN}Please enter your choice: ${NC}"
 options=("Bypass on Recovery" "Exit")
 select opt in "${options[@]}"; do
 	case $opt in
 	"Bypass on Recovery")
-		echo -e "${GRN}Bypass on Recovery"
+		echo -e "${GRN}Bypass on Recovery${NC}"
 		if [ -d "/Volumes/Macintosh HD - Data" ]; then
    			diskutil rename "Macintosh HD - Data" "Data"
 		fi
-		echo -e "${GRN}Create a new user / Tạo User mới"
-        echo -e "${BLU}Press Enter to continue, Note: Leaving it blank will default to the automatic user / Nhấn Enter để tiếp tục, Lưu ý: có thể không điền sẽ tự động nhận User mặc định"
+		echo -e "${CYAN}Create a new user / Tạo User mới${NC}"
+		echo -e "${PUR}Press Enter to continue, Note: Leaving it blank will default to the automatic user / Nhấn Enter để tiếp tục, Lưu ý: có thể không điền sẽ tự động nhận User mặc định${NC}"
   		echo -e "Enter the username (Default: Apple) / Nhập tên User (Mặc định: Apple)"
 		read realName
   		realName="${realName:= Apple}"
@@ -80,6 +86,6 @@ select opt in "${options[@]}"; do
 	"Quit")
 		break
 		;;
-	*) echo "Invalid option $REPLY" ;;
+	*) echo -e "${RED}Invalid option $REPLY${NC}" ;;
 	esac
 done
