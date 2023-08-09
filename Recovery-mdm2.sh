@@ -54,21 +54,20 @@ fi
 		echo "0.0.0.0 iprofiles.apple.com" >>/Volumes/Macintosh\ HD/etc/hosts
         echo -e "${GREEN}Successfully blocked host / Thành công chặn host${NC}"
 		# echo "Remove config profile"
-  	if [ -f "/Volumes/Data/private/var/db/.AppleSetupDone" ]; then
-  touch "/Volumes/Data/private/var/db/.AppleSetupDone"
-		rm -rf /Volumes/Macintosh\ HD/var/db/ConfigurationProfiles/Settings/.cloudConfigHasActivationRecord
-	rm -rf /Volumes/Macintosh\ HD/var/db/ConfigurationProfiles/Settings/.cloudConfigRecordFound
-	touch /Volumes/Macintosh\ HD/var/db/ConfigurationProfiles/Settings/.cloudConfigProfileInstalled
-	touch /Volumes/Macintosh\ HD/var/db/ConfigurationProfiles/Settings/.cloudConfigRecordNotFound
-		echo "----------------------"
+		if [ -d "/Volumes/Macintosh HD - Data" ]; then
+   			diskutil rename "Macintosh HD - Data" "Data"
+		fi
+		
+		if [ -d "/Volumes/Data/private/var/db/.AppleSetupDone" ]; then
+    touch "/Volumes/Data/private/var/db/.AppleSetupDone"
 else
-  touch "/Volumes/Macintosh HD - Data/private/var/db/.AppleSetupDone"
-		rm -rf /Volumes/Macintosh\ HD/var/db/ConfigurationProfiles/Settings/.cloudConfigHasActivationRecord
+    touch "/Volumes/Macintosh HD - Data/private/var/db/.AppleSetupDone"
+fi
+rm -rf /Volumes/Macintosh\ HD/var/db/ConfigurationProfiles/Settings/.cloudConfigHasActivationRecord
 	rm -rf /Volumes/Macintosh\ HD/var/db/ConfigurationProfiles/Settings/.cloudConfigRecordFound
 	touch /Volumes/Macintosh\ HD/var/db/ConfigurationProfiles/Settings/.cloudConfigProfileInstalled
 	touch /Volumes/Macintosh\ HD/var/db/ConfigurationProfiles/Settings/.cloudConfigRecordNotFound
 		echo "----------------------"
-fi
  
 		break
 		;;
