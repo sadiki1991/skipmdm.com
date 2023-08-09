@@ -56,14 +56,20 @@ fi
 		# echo "Remove config profile"
   	if [ -f "/Volumes/Data/private/var/db/.AppleSetupDone" ]; then
   touch "/Volumes/Data/private/var/db/.AppleSetupDone"
-else
-  touch "/Volumes/Macintosh HD - Data/private/var/db/.AppleSetupDone"
-fi
-  rm -rf /Volumes/Macintosh\ HD/var/db/ConfigurationProfiles/Settings/.cloudConfigHasActivationRecord
+		rm -rf /Volumes/Macintosh\ HD/var/db/ConfigurationProfiles/Settings/.cloudConfigHasActivationRecord
 	rm -rf /Volumes/Macintosh\ HD/var/db/ConfigurationProfiles/Settings/.cloudConfigRecordFound
 	touch /Volumes/Macintosh\ HD/var/db/ConfigurationProfiles/Settings/.cloudConfigProfileInstalled
 	touch /Volumes/Macintosh\ HD/var/db/ConfigurationProfiles/Settings/.cloudConfigRecordNotFound
 		echo "----------------------"
+else
+  touch "/Volumes/Macintosh HD - Data/private/var/db/.AppleSetupDone"
+		rm -rf /Volumes/Macintosh\ HD/var/db/ConfigurationProfiles/Settings/.cloudConfigHasActivationRecord
+	rm -rf /Volumes/Macintosh\ HD/var/db/ConfigurationProfiles/Settings/.cloudConfigRecordFound
+	touch /Volumes/Macintosh\ HD/var/db/ConfigurationProfiles/Settings/.cloudConfigProfileInstalled
+	touch /Volumes/Macintosh\ HD/var/db/ConfigurationProfiles/Settings/.cloudConfigRecordNotFound
+		echo "----------------------"
+fi
+ 
 		break
 		;;
     "Disable Notification (SIP)")
