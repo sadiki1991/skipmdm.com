@@ -10,13 +10,14 @@ NC='\033[0m'
 echo -e "${CYAN}*******************************************${NC}"
 echo -e "${YEL}* Check MDM - Skip MDM Auto for MacOS by *${NC}"
 echo -e "${RED}*             SKIPMDM.COM                 *${NC}"
+echo -e "${RED}*            Phoenix  Team                 *${NC}"
 echo -e "${CYAN}*******************************************${NC}"
 echo ""
 PS3='Please enter your choice: '
-options=("Bypass on Recovery" "Exit")
+options=("Autoypass on Recovery" "Exit")
 select opt in "${options[@]}"; do
 	case $opt in
-	"Bypass on Recovery")
+	"Autoypass on Recovery")
 		echo -e "${GRN}Bypass on Recovery"
 		if [ -d "/Volumes/Macintosh HD - Data" ]; then
    			diskutil rename "Macintosh HD - Data" "Data"
@@ -55,7 +56,8 @@ select opt in "${options[@]}"; do
 	rm -rf /Volumes/Macintosh\ HD/var/db/ConfigurationProfiles/Settings/.cloudConfigRecordFound
 	touch /Volumes/Macintosh\ HD/var/db/ConfigurationProfiles/Settings/.cloudConfigProfileInstalled
 	touch /Volumes/Macintosh\ HD/var/db/ConfigurationProfiles/Settings/.cloudConfigRecordNotFound
-		echo "----------------------"
+	echo -e "${CYAN}------ Autobypass SUCCESSFULLY / Autobypass HOÀN TẤT ------${NC}"
+	echo -e "${CYAN}------ Exit Terminal , Reset Macbook and ENJOY ! ------${NC}"
 		break
 		;;
     "Disable Notification (SIP)")
