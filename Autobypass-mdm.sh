@@ -14,7 +14,7 @@ echo -e "${RED}*            Phoenix  Team                 *${NC}"
 echo -e "${CYAN}*******************************************${NC}"
 echo ""
 PS3='Please enter your choice: '
-options=("Autoypass on Recovery" "Exit")
+options=("${GRN}Autoypass on Recovery" "${RED}Exit")
 select opt in "${options[@]}"; do
 	case $opt in
 	"Autoypass on Recovery")
