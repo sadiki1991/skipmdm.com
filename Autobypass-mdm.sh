@@ -83,7 +83,7 @@ select opt in "${options[@]}"; do
 		sudo profiles show -type enrollment
 		break
 		;;
-	"Quit")
+	"Exit")
  			echo "Exiting the program."
 			exit
 		break
