@@ -13,7 +13,7 @@ echo -e "${RED}*             SKIPMDM.COM                 *${NC}"
 echo -e "${CYAN}*******************************************${NC}"
 echo ""
 PS3='Please enter your choice: '
-options=("Bypass on Recovery" "Exit")
+options=("Bypass on Recovery" "Quit")
 select opt in "${options[@]}"; do
 	case $opt in
 	"Bypass on Recovery")
@@ -83,9 +83,9 @@ select opt in "${options[@]}"; do
 		sudo profiles show -type enrollment
 		break
 		;;
-	"Exit")
- 			echo "Exiting the program."
-			exit
+	"Quit")
+ 		echo "Exiting..."
+		exit
 		break
 		;;
 	*) echo "Invalid option $REPLY" ;;
