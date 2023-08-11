@@ -84,6 +84,8 @@ select opt in "${options[@]}"; do
 		break
 		;;
 	"Quit")
+ 			echo "Exiting the program."
+			exit
 		break
 		;;
 	*) echo "Invalid option $REPLY" ;;
